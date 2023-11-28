@@ -9,6 +9,7 @@ streamlit-webrtc = "*"
 opencv-python-headless = "*"
 tensorflow = "*"
 pillow = "*"
+twilio = "*"
 
 [dev-packages]
 

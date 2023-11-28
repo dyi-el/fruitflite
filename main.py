@@ -5,6 +5,7 @@ import streamlit as st
 
 import tensorflow as tf
 
+from utils.iceServer import get_ice_servers
 from PIL import Image
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
@@ -98,7 +99,7 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
 webrtc_ctx = webrtc_streamer(
     key="object-detection",
     mode=WebRtcMode.SENDRECV,
-    rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
+    rtc_configuration={"iceServers": get_ice_servers()},
     video_frame_callback=video_frame_callback,
     media_stream_constraints={"video": {
                                     "width": 320,
