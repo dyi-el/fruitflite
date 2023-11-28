@@ -37,6 +37,11 @@ Open the provided link in your web browser to access the real-time object detect
 
 Adjust the score threshold using the slider to control the detection sensitivity.
 
+## Acknowledgement
+Much of this project is derived from other open-source projects such as
+- [TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/LICENSE) by EdjeElectronics
+- [streamlit-webrtc/pages/1_object_detection.py](https://github.com/whitphx/streamlit-webrtc/blob/main/pages/1_object_detection.py) by whitphx
+
 ## License
 
 This project is licensed under the MIT License.
