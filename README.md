@@ -2,7 +2,7 @@
 
 # fruiTFLite: Object Detection for Bactocera Dorsalis and Bactocera Occipitalis
 
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fruitflite.streamlit.app)
 ## Overview
 
 This project demonstrates real-time object detection for Bactocera Dorsalis and Bactocera Occipitalis using a TensorFlow Lite model. The implementation is done using Streamlit for the user interface and TensorFlow Lite for efficient and fast inference. The model is trained using AutoML. Feel free to use the model.
@@ -36,6 +36,8 @@ streamlit run main.py
 Open the provided link in your web browser to access the real-time object detection application.
 
 Adjust the score threshold using the slider to control the detection sensitivity.
+
+#### YOU CAN CHANGE THE MODEL TO INFERENCE YOUR OWN TFLITE MODEL
 
 ## Acknowledgement
 Much of this project is derived from other open-source projects such as
