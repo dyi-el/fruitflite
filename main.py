@@ -9,11 +9,21 @@ from utils.iceServer import get_ice_servers
 from PIL import Image
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
+with st.sidebar:
+    logo = Image.open('assets/fruiTFLite.png')
+    logo = logo.resize((250, 250))
+    st.image(logo)
+    st.markdown("""
+                This project demonstrates real-time object detection for **:orange[Bactocera Dorsalis]** 
+                and **:orange[Bactocera Occipitalis]** using a TensorFlow Lite model. The implementation 
+                is done using Streamlit for the user interface and TensorFlow Lite for 
+                efficient and fast inference. The model is trained using AutoML. 
+                Feel free to use the model.
+                """)
+    
 
-logo = Image.open('assets/fruiTFLite.png')
-logo = logo.resize((200, 200))
-st.image(logo)
-
+st.header('frui:orange[TF]Lite', divider='orange')
+st.warning('Select :orange[START] to begin detecting fruitflies')
 
 # Downloaded TFLite model and labels paths
 MODEL_PATH = "assets/model.tflite"
