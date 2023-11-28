@@ -35,7 +35,11 @@ width = input_details[0]['shape'][2]
 height = input_details[0]['shape'][1]
 
 # Predefined label colors
-COLORS = np.random.uniform(0, 255, size=(len(CLASSES), 3))
+COLORS = {
+    0: (0, 255, 255),  # Yellow
+    1: (0, 165, 255),  # Orange
+}
+
 
 # Score threshold slider
 score_threshold = st.slider("Score threshold", 0.0, 1.0, 0.5, 0.05)
