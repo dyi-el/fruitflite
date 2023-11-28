@@ -2,8 +2,17 @@ import cv2
 import av
 import numpy as np
 import streamlit as st
-from streamlit_webrtc import WebRtcMode, webrtc_streamer
+
 import tensorflow as tf
+
+from PIL import Image
+from streamlit_webrtc import WebRtcMode, webrtc_streamer
+
+
+logo = Image.open('assets/fruiTFLite.png')
+logo = logo.resize((200, 200))
+st.image(logo)
+
 
 # Downloaded TFLite model and labels paths
 MODEL_PATH = "assets/model.tflite"

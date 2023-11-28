@@ -8,6 +8,7 @@ streamlit = "*"
 streamlit-webrtc = "*"
 opencv-python-headless = "*"
 tensorflow = "*"
+pillow = "*"
 
 [dev-packages]
 
