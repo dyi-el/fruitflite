@@ -9,6 +9,8 @@ from utils.iceServer import get_ice_servers
 from PIL import Image
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
+st.set_page_config(page_title="fruiTFLite", page_icon="🪰")
+
 with st.sidebar:
     logo = Image.open('assets/fruiTFLite.png')
     logo = logo.resize((250, 250))
