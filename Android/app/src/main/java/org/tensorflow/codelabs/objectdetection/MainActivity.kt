@@ -101,15 +101,52 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val selectedImageUri: Uri? = data?.data
         return if (selectedImageUri != null) {
             try {
-                val inputStream = contentResolver.openInputStream(selectedImageUri)
-                BitmapFactory.decodeStream(inputStream)
+                // Load a sampled version of the image
+                val sampledBitmap = decodeSampledBitmapFromUri(selectedImageUri, inputImageView.width, inputImageView.height)
+                // Ensure sampledBitmap is not null before returning
+                sampledBitmap ?: Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
             } catch (e: IOException) {
                 Log.e(TAG, "Error loading selected image", e)
-                Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888) // Handle error, return a default image
+                // Handle error, return a default image
+                Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
             }
         } else {
-            Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888) // Handle error, return a default image
+            // Handle error, return a default image
+            Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
         }
+    }
+
+    @Throws(IOException::class)
+    private fun decodeSampledBitmapFromUri(uri: Uri, reqWidth: Int, reqHeight: Int): Bitmap? {
+        // Decode image size without loading into memory
+        val options = BitmapFactory.Options()
+        options.inJustDecodeBounds = true
+        BitmapFactory.decodeStream(contentResolver.openInputStream(uri), null, options)
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight)
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false
+        return BitmapFactory.decodeStream(contentResolver.openInputStream(uri), null, options)
+    }
+
+
+    private fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
+        val height = options.outHeight
+        val width = options.outWidth
+        var inSampleSize = 1
+
+        if (height > reqHeight || width > reqWidth) {
+            val halfHeight = height / 2
+            val halfWidth = width / 2
+
+            while ((halfHeight / inSampleSize) >= reqHeight && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2
+            }
+        }
+
+        return inSampleSize
     }
 
 

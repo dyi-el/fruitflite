@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/bualoydgreat/Downloads/odml-pathways-main/object-detection/codelab2/android/final/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "/Users/bualoydgreat/PERSONAL-TEMPS/FRUITFLITE MAIN/fruitflite-streamlit/Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
             "map": [
                 {
                     "source": "/Users/bualoydgreat/.gradle/caches/transforms-2/files-2.1/4102c377b7a8a929cfb8c6bcf858d486/appcompat-1.2.0/res/values-v28/values-v28.xml",
