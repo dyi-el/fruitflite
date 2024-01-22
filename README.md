@@ -39,10 +39,16 @@ Adjust the score threshold using the slider to control the detection sensitivity
 
 #### YOU CAN CHANGE THE MODEL TO INFERENCE YOUR OWN TFLITE MODEL
 
+## Android App
+The android app is has bugs in terms of processing images. It is a modified code from ["Build and deploy a custom object detection model with TensorFlow Lite (Android)"](https://developers.google.com/codelabs/tflite-object-detection-android). 
+
+![Sample-Screen](sample-screen.gif)
+
 ## Acknowledgement
 Much of this project is derived from other open-source projects such as
 - [TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi](https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/LICENSE) by EdjeElectronics
 - [streamlit-webrtc/pages/1_object_detection.py](https://github.com/whitphx/streamlit-webrtc/blob/main/pages/1_object_detection.py) by whitphx
+- [Build and deploy a custom object detection model with TensorFlow Lite (Android)](https://developers.google.com/codelabs/tflite-object-detection-android) by Google
 
 ## License
 
