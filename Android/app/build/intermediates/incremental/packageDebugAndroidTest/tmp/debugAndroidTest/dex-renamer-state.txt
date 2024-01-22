@@ -1,0 +1,4 @@
+#Mon Jan 22 19:47:19 PST 2024
+base.0=/Users/bualoydgreat/Downloads/odml-pathways-main/object-detection/codelab2/android/final/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

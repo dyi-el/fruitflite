@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FruiTFlite</string>
+    <string name="tv_take_photo">Take photo</string>
+    <string name="tv_description">Select an image from gallery or take a photo with camera</string>
+    <string name="tv_placeholder">Fruitfly Detection Demo</string>
+    <string name="tv_from_gallery">From gallery</string>
+</resources>
